@@ -26,7 +26,7 @@ X_train = []
 y_train = []
 
 
-for i in range(24, 63341):  
+for i in range(24, 63300):  
     X_train.append(X_scaled[i-24:i, 0]) # Independent variable with first 24 samples
     y_train.append(X_scaled[i, 0]) # 25th Sample used as the Target Variable
 X_train, y_train = np.array(X_train), np.array(y_train) # converting the normal lists to Numpy arrays for keras to understand
@@ -67,7 +67,7 @@ regressor.fit(X_train, y_train,
 X_test = []
 y_test = []
 
-X_scaled_test = X_scaled[63293:95936,:]
+X_scaled_test = X_scaled[63200:95900,:]
 for i in range(24, 32643):  
     X_test.append(X_scaled_test[i-24:i, 0]) # Independent variable with first 24 samples
     y_test.append(X_scaled_test[i, 0]) # 25th Sample used as the Target Variable
